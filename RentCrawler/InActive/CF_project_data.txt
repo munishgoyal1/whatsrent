@@ -1,0 +1,58 @@
+http://www.commonfloor.com/hisar-city
+
+http://www.commonfloor.com/index/search-projects
+
+0 Projects
+
+p                                                    
+reload_home_page_search  true                        
+search_intent            buy                         
+city                     Gurgaon                     
+location                 SEARCH LOCATION / PROJECTS  
+has_typed                0                           
+min_inr                  0                           
+max_inr                  0                           
+use_pp                   0                           
+
+============================================
+http://www.commonfloor.com/apartments
+
+view_type               list                     
+city                    Pune                     
+project_location_input  Location / Project Name  
+type[]                  All                      
+min_inr                 0                        
+max_inr                 0                        
+fetch_new               all                      
+search_intent           rent                     
+r                       a                        
+page_source             project_search           
+write_to_pp             1                        
+change                                           
+clear_filter            0                        
+builder_name                                     
+builder                                          
+bed_rooms                                        
+num_bedroom[]           All                      
+min_carpetarea          Min                      
+max_carpetarea          Max                      
+bed_rooms                                        
+completion[]            All                      
+project_age[]           All                      
+project_age[]           All                      
+duedate[]               All                      
+sortby                  relevance                
+page                    7                        
+r                       a                        
+page_size               15                       
+
+
+in 1st page get total number of projects 
+<input type="hidden" value="(994)" id="totalproject">
+<input type="hidden" value="(0)" id="totalproject">
+
+<a class='middle-align' href="
+"
+===========================================
+http://www.commonfloor.com/cities
+#205FA4;">Kathua</h3>
