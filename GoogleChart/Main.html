@@ -1,0 +1,190 @@
+<html>
+  <head>
+  
+	   
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+	<!--    <script type="text/javascript" src="loader.js"></script>
+	<script src="jquery-2.2.2.min.js"></script> -->
+
+    <script type="text/javascript">
+	   google.charts.load('current', {'packages':['bar']});
+	   
+	var defaultCity = "Pune";
+	var cities = [];
+	var citiesMetadata = {};
+	
+	jQuery(function($) {
+	
+	var $citydropdown = $('#citydropdown');
+    var $areadropdown = $('#areadropdown');
+	var $projectdropdown = $('#projectdropdown');
+	console.log("define drop downs data");
+	
+	
+    $('#citydropdown').change(function () {
+	console.log("city changed");
+        var city = $(this).val();
+		console.log("selected city:" + city);
+		console.log(typeof city);
+		console.log(window.cities);
+		console.log(typeof window.citiesMetadata);
+        console.log(window.citiesMetadata[city]);
+		
+		areas = window.citiesMetadata[city].areanames || [];
+        
+        var html = $.map(areas, function(area){
+            return '<option value="' + area + '">' + area + '</option>'
+        }).join('');
+        $areadropdown.html('<option value=""></option>' + html)
+		
+		prjcts = window.citiesMetadata[city].projectnames || [];
+        
+        html = $.map(prjcts, function(prjct){
+            return '<option value="' + prjct + '">' + prjct + '</option>'
+        }).join('');
+        $projectdropdown.html('<option value=""></option>' + html)
+    });
+});
+	  
+	   
+	var getMetadataOnLoad = function() {
+	
+	$.ajax({
+        url: "http://localhost:43248/RentService.svc/rent/city/metadata",
+		dataType:"json",
+		success : function (response) {
+		console.log("city metadata response start");
+		console.log(response);
+		console.log("city metadata response end");
+	    initDropDowns(response);
+		}
+    });
+	
+   
+};
+	var drawRentData = function(city, area, project) {
+	var params = { area:area, project:project };
+    var str = jQuery.param( params );
+	var url = 'http://localhost:43248/RentService.svc/rent/city/' + city + '/averagerent?' + str;
+	
+	 $.ajax({
+        url: url,
+		dataType:"json",
+		success : function (response) {
+		console.log("avgrent response start");
+		console.log(response);
+		console.log("avgrent response end");
+		drawChart(response);
+		}
+    });
+	
+	}
+	
+	function onButtonClick() {
+	console.log("on button click selections city: " + $('#citydropdown').val() + " area: " + $('#areadropdown').val() + " project: " + $('#projectdropdown').val());
+	drawRentData($('#citydropdown').val(),$('#areadropdown').val(),$('#projectdropdown').val());
+	}
+	
+	google.charts.setOnLoadCallback(getMetadataOnLoad); 		
+	google.charts.setOnLoadCallback(function()
+	{ 
+	   	console.log("drawChart for defaultCity");
+		drawRentData(defaultCity,"","");
+	});
+	
+	console.log("get rent callback set");
+	
+	function isBlank(str) {
+		return (!str || /^\s*$/.test(str));
+    }
+      
+	function initDropDowns(jsonData) {
+	// populate initial city, project and area here
+	console.log("initDropDowns start");
+	cities[0] = '';
+	citiesMetadata[cities[0]] = {areanames:[], projectnames:[]};
+	
+	for (var i=0;i<jsonData.length;i++) 
+	{
+		 cities[i+1] = jsonData[i].Key;
+		 var city = cities[i+1];
+		 citiesMetadata[city] = jsonData[i].Value;
+			/*
+			console.log(city);
+			console.log(citiesMetadata[city]);
+			for (var j=0;j<citiesMetadata[city].areanames.length;j++) 
+			console.log(citiesMetadata[city].areanames[j]);
+		   for (var j=0;j<citiesMetadata[city].projectnames.length;j++) 
+			console.log(citiesMetadata[city].projectnames[j]);
+			*/
+	} 
+
+	console.log("populate cities list");
+	console.log(cities);
+	var html = $.map(cities, function(city){
+            return '<option value="' + city + '">' + city + '</option>'
+        }).join('');
+        $('#citydropdown').html(html)
+		
+		 console.log("set default city in dropdown");
+		$('#citydropdown').val(defaultCity);
+		
+		console.log("initDropDowns end");
+	}
+	
+	   
+      function drawChart(jsonData) {
+	  
+		var dataTable = new google.visualization.DataTable();
+		dataTable.addColumn('string','Unit Type');
+		dataTable.addColumn('number','Average Monthly Rent');
+
+		for (var i=0;i<jsonData.length;i++) {
+		    if (isBlank(jsonData[i].avg_rent_monthly)) { continue; }
+			var row = [];       
+			row.push(jsonData[i].unit_type);
+			row.push(jsonData[i].avg_rent_monthly);
+			dataTable.addRow(row);
+		} 
+   
+
+        var options = {
+          chart: {
+            title: 'Average Ongoing Monthly Rent',
+            subtitle: 'Rupees /Month Rent for each unit type',
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(dataTable, options);
+      }
+	  
+	  function sleepFor( sleepDuration ){
+		var now = new Date().getTime();
+		while(new Date().getTime() < now + sleepDuration){ /* do nothing */ } 
+    }
+    </script>
+  </head>
+  <body>
+   <label class="page1">City</label>
+<div class="tooltips" title="Please select the city">
+    <select id="citydropdown" name="citydropdown" placeholder="Pune">
+    </select>
+</div>
+	   <label class="page1">Area</label>
+<div class="tooltips" title="Please select the area">
+    <select id="areadropdown" name="areadropdown" placeholder="Anylocation"></select>
+</div>
+
+	   <label class="page1">Project</label>
+<div class="tooltips" title="Please select the project">
+    <select id="projectdropdown" name="projectdropdown" placeholder="Anyproject"></select>
+</div>
+<div><button id="getdata" onclick="onButtonClick()">Get Data</button></div>
+
+    <div id="columnchart_material" style="width: 950px; height: 550px;"></div>
+  </body>
+</html>

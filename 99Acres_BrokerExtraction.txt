@@ -1,0 +1,191 @@
+
+Premium Dealer page:
+
+<!--Dealing in Starts-->
+<div class="dealIn f13 colorBlack mt10">
+	<div class="f16 b">Company Dealing in</div>
+		<em class="lineGW bdrW vm10"></em>
+	<div class="clr vm10 lf">
+		<i class="lf locDelIn2"></i>
+		<div class="dlText">
+			<b>Localities dealing In</b><br />
+			<span id="ovwDealInLocalitiesLessText">
+			Sector 28 Faridabad, Sector 21A Faridabad				</span>
+						</div>
+	</div>
+	<div class="clr vm10 lf">
+		<i class="lf locDelIn1"></i>
+		<div class="dlText">
+			<b>Property types dealing in</b><br />
+			<span id="ovwDealInPropsLessText">
+			Independent House/Villa, Residential Land				</span>
+						</div>
+	</div>
+	<div class="clr"></div>
+</div>
+<!--Dealing in Ends-->             
+
+<div class="f18 b m10">Contact Details</div>
+                <div class="m10">
+                    <img src="/property/photo_dealer.php?type=PHOTO&PROFILEID=496117"  style="width:73px;height:77px;" class="bdr lf" />
+                    
+
+<div class="lf m10 f13 b">
+     Harvinder Singh<br/>
+	<div class="mt8 grey1"><br/></div>
+</div>
+<div class="clr"></div>
+ <a  id="viewphno496117_contact" class="R5 f14 mt10 b yBtn" onclick="trackClickAction('CLICKTOVIEW','','DIF','DIFLANDING');return pg.openViewPhoneNoLayer(event,'LADProfile','496117','496117','P','from_dif_contact','UiB8IFFTIHwgUyB8IzcjICB8IFNIIzE2IyB8IDQ5NjExNyB8IERFQUxFUl9TRUFSQ0ggfCA1MDc3NDEwNjczMjcyNTc2ICMzI3wgIHwgMSw0LDIsMyw5MCw1LDIyLDgwIHwgMTAgfCMxIyAgfCBPLEEsQiMzIyB8IDEsNCwyLDMsOTAsNSwyMiw4MCM1IyB8IE8sQSxCICMxNiN8ICB8IE5QLFIyTSAjNSN8ICA=','Harvinder Singh','Harvinder Properties','','','','N','DEALER_PROFILE','QWdlbnQ6SGFydmluZGVyIFNpbmdoCjk4MTA2NDk1MjMKRGVhbHMgaW4gU2FsZSBvZiBSZXMuIHByb3BlcnRpZXMgIGFyb3VuZApGYXJpZGFiYWQ=','DEALER_PROFILE')">
+  <i class="mobileIcn mr5" ></i> View Phone Number
+ </a>
+<div class="f13 mt20">
+	<b class="grey1">Website:</b> <a class="links" target='_blank' rel="nofollow" href="http://www.harvinderproperties.com">http://www.harvinderproperties.com</a>
+</div>
+<div class="f13 mt10">            
+	</div>                    <em class="lineGW bdrW vm10"></em>
+
+                    
+                            <div>    
+		<div class="f13 mt20  b">Corporate Office:</div>
+            <div class=" f13 lf m10" style="width:620px;word-wrap: break-word;">J 9 /19, Dlf City Phase -Ii</br>Gurgaon</br><b>Mobile: </b>91-9810649523</br></div>            </div>
+		<div class="f12  m10 clr"></div>
+		<br>
+            <div id='contact_more_address' style='display:none'>
+	                        </div>
+            
+
+<div class="clr mt20"></div>
+   
+
+                </div>
+            </div>
+        </div>
+
+        <!--Left Available Ends-->
+
+    </div>
+    <!--CPRP Available Ends-->
+</div>
+<div id='dif_company_tab_content' style="display:none;">
+   <div class="cPRp">
+         <div class="tabCont colorGrey2 lf" style="margin-right:15px;">
+         	
+<h2 class="f16 b">Company Brief</h2>
+ <div class="tabC f13">  
+    <p>
+     Deals in residential & commercial properties. Also deals in agriculture land. 
+    </p>
+ </div>   
+         	                    
+                    <h2 class="f16 b"></h2>
+
+         </div>
+    </div>
+</div>
+        <!--Tab Content + Right Panel Container Ends-->
+		
+
+
+
+
+Non-Premium:
+
+<!--1st section-->
+	<table class="mt10">
+	<tr>
+				<td class="b" style='vertical-align:bottom'><h1 class="tpdlrd_h1 f18">Land N Soil</h1></td>
+	</tr>
+	</table>
+	<table>
+	<tr>
+	<td class="f12" style="overflow:hidden">
+		<div style="position:relative;width:545px;overflow:hidden">
+									<div class='b' style="margin-top:10px">
+			Sale of Residential & Commercial Properties.			</div>
+									<div style="margin-top:10px">
+			<b>City:&nbsp;</b>
+			Gurgaon, Faridabad, Haryana Others, Agra, Delhi South			</div>
+									<div style="margin-top:10px">
+			<b>Dealing in:&nbsp;</b>Farm House, Residential Land, Industrial Lands/Plots, Agricultural/Farm Land			</div>
+
+									<div style="margin-top:10px">
+			<b>About Company:&nbsp;</b>
+			We, Land N Soil, which has rich and extensive experience in the<br/>field of building Farm Houses .we aim at maintaining utmost and<br/>stringent focus on qua...			<a id='a_comp_prof' href="javascript:;" onClick="Display_Info_Layer('More About Company','comp_prof','395','180')"> More<img src="http://static.99acres.com/images/dexternal.gif" border="0" align="absmiddle"></a>
+						</div>
+									<div class="b" style="margin-top:10px">
+			34&nbsp;Properties Listed
+			</div>
+					</div>
+	</td>
+	</tr>
+	</table>
+</td><!--1st section ends-->
+<td class=f11><!--2nd section-->
+	<table>
+	<tr>
+	<td width="350px">
+	<div class="f16 b" style="height:30px">Contact Details</div>
+	<div><b></b></div>
+	<div><b>Chandan</b></div>
+	<div >Land N Soil</div>
+		</div> 
+	<div class="mt10 f12">Farm No 1 Khori Farm Landers,<br>  	<b>
+	, Faridabad - 121002	</b>
+	</div>
+	<!-- <div class="mt10 f12">	<b>Mobile: </b>9810121562, 9811296487, 9728280849</div>
+	<div class="f12"></div> tkt#1994 removing mobile-->
+	<div class="mt10 f11">	<b>Website: </b><a rel='nofollow' href="http://www.landnsoil.com" class="u" style="color:#000;" target="_blank">http://www.landnsoil.com</a>
+	</div>
+	
+     </td>	
+	<td class="vmid">
+	<img src='http://static.99acres.com/images/pnava.gif' width=72 height=77 border=0>	</td>
+	</tr>
+	<tr>
+	<td colspan="2">
+	<div class="mt10 f12">	</div>
+        <input type='hidden' name='dealerCities' value='8,10,105,197,3' id='dealerDealingCities' />
+        <input type='hidden' name='dealerProps' value='5,3,16,20' id='dealerDealingProps885583' />
+	<div class="floatl mt10"><a class="lf" target=_blank href=/do/dealer_profile/searchProfile?sid=QyB8IFFTIHwgUyB8IzI0IyAgfCA4ODU1ODMgfCM5IyAgfCBPLEEsQiM5IyB8IE8sQSxCICMyMyN8ICA=&profileid=885583&lstAcn=DEALER_PROFILE&lstAcnId=>
+
+
+		<input class="mailalerts" type="image" src="http://static.99acres.com/images/99acres_UI/snd-eml-alts.gif" onclick="return pg.openEmailSMSLayer(event,this,'885583','LADProfile',_sid,'','C','','','Dealer','','','','','','Y','','Dealer_Profile','Y')"/></a>
+
+        <a href="javascript:void(0);" style="color:#000; height:20px; line-height: 20px; min-height: 16px; padding: 6px 10px;" class="f14 rf hm10 greySubmit bdrBox b"  id="viewphno885583" onclick="return pg.openViewPhoneNoDropDownLayer(event,'LADProfile','885583','885583','P','from_src','QyB8IFFTIHwgUyB8IzI0IyAgfCA4ODU1ODMgfCM5IyAgfCBPLEEsQiM5IyB8IE8sQSxCICMyMyN8ICA=','Chandan','Land N Soil','9810121562, 9811296487, 9728280849','','','N','DEALER_PROFILE','QWdlbnQ6Q2hhbmRhbgo5ODEwMTIxNTYyLCA5ODExMjk2NDg3CkRlYWxzIGluIFNhbGUgb2YgUmVzLiAmIENvbS4gcHJvcGVydGllcyAgYXJvdW5kCkd1cmdhb24gJiAgRmFyaWRhYmFk','DEALER_PROFILE')">View Phone Number</a>
+
+	</td>
+	</tr>
+	</table>
+</td><!--2nd section ends-->
+</tr>
+</table>
+</div>
+</div>
+<!-- company more -->
+<DIV id="comp_prof" style="display:none;">
+<div class="f13 p5" style="overflow:auto; width:380px; height:180px ">We, Land N Soil, which has rich and extensive experience in the field of building Farm Houses .we aim at maintaining utmost and stringent focus on quality and building long lasting, trust-based relationships with our clients.Our in-depth project execution experience, availability of robust infrastructure, skilled workforce, and judicious and innovative use of modern construction technology, helps us in providing our national & international clients with luxurious, yet economical farm houses Furthermore, our experienced industry professionals in the on-going projects ensure the most productive and optimal utilization of all our resources.
+
+What We Offer
+Our well planned projects at convenient locations provide our discerning clients with a rejuvenating green cover and ample open spaces. We also believe in offering flexibility in expression of style and taste and therefore provide land in varying sizes.</div>
+</DIV>
+
+<!-- Beacon tracking STARTS- Ntimes increment in Dealer_num_view moved to beacon by Sukhdeep on 7 th feb 2011-->
+<img id = 'beacon_img1' width=1 height=1 > <script>
+
+    var randNumForBeacon = Math.floor(Math.random()*Math.pow(10,16));
+   
+   var src ='/do/Beacon/index/'+randNumForBeacon+'/0003005/DEALER_SEARCH?update=NTIMES&id=885583';
+  
+   beacon_track(src,'beacon_img1');
+   </script>
+<!-- Beacon tracking ENDS- Ntimes increment in Dealer_num_view moved to beacon by Sukhdeep on 7 th feb 2011-->
+
+<!-- company more ends -->
+
+<div class='clr'></div>
+<div class="srpPA f13 r5 mr12 rel" >
+
+    <em class="icnPa lf mr5"></em>
+    <a href="javascript:void(0);" onclick="return pg.openSaveSearchLayer(event, 'LADProfile', 'A','','QyB8IFFTIHwgUyB8IzI0IyAgfCA4ODU1ODMgfCM5IyAgfCBPLEEsQiM5IyB8IE8sQSxCICMyMyN8ICA=')" >Set this search as a property alert</a>
+ <em class="icnArw"></em>
+</div>

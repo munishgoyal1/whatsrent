@@ -1,0 +1,170 @@
+<html>
+  <head>
+  
+	   
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+	<!--    <script type="text/javascript" src="loader.js"></script>
+	<script src="jquery-2.2.2.min.js"></script> -->
+
+    <script type="text/javascript">
+	   google.charts.load('current', {'packages':['bar']});
+	   
+	   sleepFor(1000);
+	/*
+	var dropdowndata = {
+        'Germany': ['Duesseldorf', 'Leinfelden-Echterdingen', 'Eschborn'],
+        'Spain': ['Barcelona'],
+        'Hungary': ['Pecs'],
+        'USA': ['Downers Grove'],
+        'Mexico': ['Puebla'],
+        'South Africa': ['Midrand'],
+        'China': ['Beijing'],
+        'Russia': ['St. Petersburg'],
+    };
+	*/
+	
+	jQuery(function($) {
+	var dropdowndata = {
+        'Germany': ['Duesseldorf', 'Leinfelden-Echterdingen', 'Eschborn'],
+        'Spain': ['Barcelona'],
+        'Hungary': ['Pecs'],
+        'USA': ['Downers Grove'],
+        'Mexico': ['Puebla'],
+        'South Africa': ['Midrand'],
+        'China': ['Beijing'],
+        'Russia': ['St. Petersburg'],
+    };
+    var $areadropdown = $('#areadropdown');
+	var $projectdropdown = $('#projectdropdown');
+	
+    $('#citydropdown').change(function () {
+        var city = $(this).val();
+		lcns = dropdowndata[city] || [];
+        
+        var html = $.map(lcns, function(lcn){
+            return '<option value="' + lcn + '">' + lcn + '</option>'
+        }).join('');
+        $areadropdown.html(html)
+		
+		prjcts = dropdowndata[city] || [];
+        
+        html = $.map(prjcts, function(lcn){
+            return '<option value="' + lcn + '">' + lcn + '</option>'
+        }).join('');
+        $projectdropdown.html(html)
+    });
+});
+	  
+	   
+	var getDataOnLoad = $(document).ready(function() {
+	
+	$.ajax({
+        url: "http://localhost:43248/RentService.svc/rent/city/metadata",
+		dataType:"json",
+		success : function (response) {
+		console.log("city metadata response start");
+		console.log(response);
+		console.log("city metadata response end");
+	    populateDropDowns(response);
+		}
+    });
+	
+    $.ajax({
+        url: "http://localhost:43248/RentService.svc/rent/city/Pune/averagerent",
+		dataType:"json",
+		success : function (response) {
+		console.log("avgrent response start");
+		console.log(response);
+		console.log("avgrent response end");
+		//drawChart(response);
+		
+		}
+    });
+});
+	
+	//google.setOnLoadCallback(getDataOnLoad); 		
+	
+	
+	function sleepFor( sleepDuration ){
+    var now = new Date().getTime();
+    while(new Date().getTime() < now + sleepDuration){ /* do nothing */ } 
+}
+      
+      //google.charts.setOnLoadCallback(drawChart);
+	  
+	function populateDropDowns(jsonData) {
+	
+	/*
+		var dataTable = new google.visualization.DataTable();
+		dataTable.addColumn('string','Unit Type');
+		dataTable.addColumn('number','Average Monthly Rent');
+
+		for (var i=0;i<jsonData.length;i++) 
+		{
+			var row = [];       
+			row.push(jsonData[i].unit_type);
+			row.push(jsonData[i].avg_rent_monthly);
+		   
+			dataTable.addRow(row);
+		} 
+	*/
+		//console.log(jsonData);
+	}
+	
+	   
+      function drawChart(jsonData) {
+	  
+		var dataTable = new google.visualization.DataTable();
+		dataTable.addColumn('string','Unit Type');
+		dataTable.addColumn('number','Average Monthly Rent');
+
+		for (var i=0;i<jsonData.length;i++) {
+			var row = [];       
+			row.push(jsonData[i].unit_type);
+			row.push(jsonData[i].avg_rent_monthly);
+			dataTable.addRow(row);
+		} 
+   
+
+        var options = {
+          chart: {
+            title: 'Average Ongoing Monthly Rent',
+            subtitle: 'Rupees /Month Rent for each unit type',
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(dataTable, options);
+      }
+    </script>
+  </head>
+  <body>
+   <label class="page1">City</label>
+<div class="tooltips" title="Please select the city">
+    <select id="citydropdown" name="citydropdown" placeholder="Pune">
+        <option></option>
+        <option>Germany</option>
+        <option>Spain</option>
+        <option>Hungary</option>
+        <option>USA</option>
+        <option>Mexico</option>
+        <option>South Africa</option>
+        <option>China</option>
+        <option>Russia</option>
+    </select>
+</div>
+	   <label class="page1">Area</label>
+<div class="tooltips" title="Please select the area">
+    <select id="areadropdown" name="areadropdown" placeholder="Anylocation"></select>
+</div>
+
+	   <label class="page1">Project</label>
+<div class="tooltips" title="Please select the project">
+    <select id="projectdropdown" name="projectdropdown" placeholder="Anyproject"></select>
+</div>
+    <div id="columnchart_material" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+==========================================
+GetCities
+http://www.proptiger.com/all-cities
+
+rgb(236, 236, 236)"><a href=  "/agra-real-estate">Agra Real Estate</a></td>
+
+==========================================
+Property Type Page:
+
+http://www.proptiger.com/{city}-
+
+real-estate  --> covers everything dont use it
+apartments-flats-sale
+villas-sale
+sites-plots-sale
+
+
+
+If nothing found: Sorry! No properties were found for the filters applied by you
+
+Page Numbering: http://www.proptiger.com/pune/apartments-flats-sale#start=3
+
+Total Number of pages = Numproperties / 100 
+</strong> out of <strong>9319</strong>
+search number of properties . out of___
+
+Folders-->
+PropTiger
+City
+Project Type (Apartment, Villa or Plot)
+Project  ---> project file (later on put images etc.)
+Unit Types ---> Unit files (not much required)
+
+
+
+========================
+
+project link:
+Find: div class="projectdetail" itemscope itemtype="http://schema.org/Place"
+Then Search: href="/pune/hinjewadi/right-choice-marina-bay-646744"
+
+city, locality, projectname-id
+http://www.proptiger.com/jodhpur/kabir-nagar/adarsh-buildestate-the-kingdom-656647
+
+
+
+==========================================================================================
+
+http://www.proptiger.com/search_list.php?city[]=gurgaon&bed=0&budget=0,0&q=CITY:gurgaon&propertyType[]=Villa&start=1
+http://www.proptiger.com/search_list.php?city[]=gurgaon&bed=0&budget=0,0&q=CITY:gurgaon&propertyType[]=Apartment&start=1
+http://www.proptiger.com/search_list.php?city[]=gurgaon&bed=0&budget=0,0&q=CITY:gurgaon&propertyType[]=Plot&start=2
+

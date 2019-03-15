@@ -1,0 +1,6 @@
+runtype:=3
+minutesold:=600
+rootdir:=D:\WhatsRent\Data\Rent\CommonFloor\
+connectionstring:=Data Source = MUNISH-LENOVO; Initial Catalog = WhatsRent; Integrated Security = True
+cities:=Hyderabad,Kolkata,Pune,Bangalore,Chennai,Delhi-NCR,Mumbai
+log4netconfig:="D:\WhatsRent\Data\Rent\CommonFloor\log4net.config"
