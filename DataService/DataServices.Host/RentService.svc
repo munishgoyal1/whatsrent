@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="WhatsRent.DataServices.RentService.RentService" Factory="WhatsRent.DataServices.Host.RentServiceFactory" %>
